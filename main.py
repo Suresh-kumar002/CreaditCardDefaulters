@@ -31,30 +31,23 @@ def home():
 @cross_origin()
 def predictRouteClient():
     try:
-        if request.json is not None:
-            path = request.json['filepath']
+        data = request.get_json(silent=True)
+        if data and 'filepath' in data:
+            path = data['filepath']
+        else:
+            path = request.form.get('filepath')
 
-            pred_val = pred_validation(path) #object initialization
+        if not path:
+            return Response("Error Occurred! Missing filepath. Use the default button or enter a valid file path.", status=400)
 
-            pred_val.prediction_validation() #calling the prediction_validation function
+        pred_val = pred_validation(path)  # object initialization
+        pred_val.prediction_validation()  # calling the prediction_validation function
 
-            pred = prediction(path) #object initialization
+        pred = prediction(path)  # object initialization
 
-            # predicting for dataset present in database
-            path = pred.predictionFromModel()
-            return Response("Prediction File created at %s!!!" % path)
-        elif request.form is not None:
-            path = request.form['filepath']
-
-            pred_val = pred_validation(path) #object initialization
-
-            pred_val.prediction_validation() #calling the prediction_validation function
-
-            pred = prediction(path) #object initialization
-
-            # predicting for dataset present in database
-            path = pred.predictionFromModel()
-            return Response("Prediction File created at %s!!!" % path)
+        # predicting for dataset present in database
+        path = pred.predictionFromModel()
+        return Response("Prediction File created at %s!!!" % path)
 
     except ValueError:
         return Response("Error Occurred! %s" %ValueError)

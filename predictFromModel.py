@@ -39,7 +39,9 @@ class prediction:
 
             file_loader=file_methods.File_Operation(self.file_object,self.log_writer)
             kmeans=file_loader.load_model('KMeans')
-
+            if not hasattr(kmeans, '_n_threads'):
+                # Compatibility fix for KMeans objects saved with older/newer scikit-learn versions
+                kmeans._n_threads = None
 
             clusters=kmeans.predict(X)#drops the first column for cluster prediction
             X['clusters']=clusters

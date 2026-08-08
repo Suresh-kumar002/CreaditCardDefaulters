@@ -194,17 +194,22 @@
 				e.preventDefault();
 				$('#loading').show();
 				var path = $(this).attr("data-path");
-				$.ajax({
-					//change url below
-					url : "/predict",
-					type: "POST",
-					data: {filepath:path},
-					success: function(response){
-						$(".json-result").html('<p>"Prediction File created !!!</p><pre>' + response + '</pre>');
-						$('#loading').hide();
-					}
-				});
-				
+                if (!path) {
+                    $('#loading').hide();
+                    $(".json-result").html('<p>Error: missing default file path.</p>');
+                    return;
+                }
+                $.ajax({
+                    //change url below
+                    url : "/predict",
+                    type: "POST",
+                    data: {filepath:path},
+                    success: function(response){
+                        $(".json-result").html('<p>"Prediction File created !!!</p><pre>' + response + '</pre>');
+                        $('#loading').hide();
+                    },
+                    error: function(xhr){
+                        $(".json-result").html('<p>Error: ' + xhr.responseText + '</p>');
 			});
 		});
 	</script>

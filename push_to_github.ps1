@@ -15,7 +15,11 @@ git remote add origin $RemoteUrl
 git add -A
 $msg = Read-Host "Enter commit message (or press Enter for default)"
 if ([string]::IsNullOrWhiteSpace($msg)) { $msg = "Add deployment files and README" }
-git commit -m "$msg" || Write-Host "Nothing to commit or already committed"
+try {
+    git commit -m "$msg" | Out-Null
+} catch {
+    Write-Host "Nothing to commit or already committed"
+}
 git branch -M main
 
 Write-Host "Pushing to origin main... you may be prompted to authenticate."

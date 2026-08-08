@@ -110,3 +110,77 @@
 2020-04-12/21:51:00		Entered the load_model method of the File_Operation class
 2020-04-12/21:51:00		Model File XGBoost0 loaded. Exited the load_model method of the Model_Finder class
 2020-04-12/21:51:00		End of Prediction
+2026-08-08/19:10:14		Start of Validation on files for prediction!!
+2026-08-08/19:12:02		Start of Validation on files for prediction!!
+2026-08-08/19:12:07		Start of Validation on files for prediction!!
+2026-08-08/19:12:07		Raw Data Validation Complete!!
+2026-08-08/19:12:07		Starting Data Transforamtion!!
+2026-08-08/19:12:07		DataTransformation Completed!!!
+2026-08-08/19:12:07		Creating Prediction_Database and tables on the basis of given schema!!!
+2026-08-08/19:12:07		Table creation Completed!!
+2026-08-08/19:12:07		Insertion of Data into Table started!!!!
+2026-08-08/19:12:16		Insertion in Table completed!!!
+2026-08-08/19:12:16		Deleting Good Data Folder!!!
+2026-08-08/19:12:16		Good_Data folder deleted!!!
+2026-08-08/19:12:16		Moving bad files to Archive and deleting Bad_Data folder!!!
+2026-08-08/19:12:16		Bad files moved to archive!! Bad folder Deleted!!
+2026-08-08/19:12:16		Validation Operation completed!!
+2026-08-08/19:12:16		Extracting csv file from table
+2026-08-08/19:12:16		Start of Prediction
+2026-08-08/19:12:16		Entered the get_data method of the Data_Getter class
+2026-08-08/19:12:16		Data Load Successful.Exited the get_data method of the Data_Getter class
+2026-08-08/19:12:16		Entered the is_null_present method of the Preprocessor class
+2026-08-08/19:12:16		Finding missing values is a success.Data written to the null values file. Exited the is_null_present method of the Preprocessor class
+2026-08-08/19:12:16		Entered the scale_numerical_columns method of the Preprocessor class
+2026-08-08/19:12:16		scaling for numerical values successful. Exited the scale_numerical_columns method of the Preprocessor class
+2026-08-08/19:12:16		Entered the load_model method of the File_Operation class
+2026-08-08/19:12:16		Model File KMeans loaded. Exited the load_model method of the Model_Finder class
+2026-08-08/19:12:16		Error occured while running the prediction!! Error:: 'KMeans' object has no attribute '_n_threads'
+2026-08-08/19:15:48		Start of Validation on files for prediction!!
+2026-08-08/19:15:48		Raw Data Validation Complete!!
+2026-08-08/19:15:48		Starting Data Transforamtion!!
+2026-08-08/19:15:48		DataTransformation Completed!!!
+2026-08-08/19:15:48		Creating Prediction_Database and tables on the basis of given schema!!!
+2026-08-08/19:15:48		Table creation Completed!!
+2026-08-08/19:15:48		Insertion of Data into Table started!!!!
+2026-08-08/19:15:59		Insertion in Table completed!!!
+2026-08-08/19:15:59		Deleting Good Data Folder!!!
+2026-08-08/19:15:59		Good_Data folder deleted!!!
+2026-08-08/19:15:59		Moving bad files to Archive and deleting Bad_Data folder!!!
+2026-08-08/19:15:59		Bad files moved to archive!! Bad folder Deleted!!
+2026-08-08/19:15:59		Validation Operation completed!!
+2026-08-08/19:15:59		Extracting csv file from table
+2026-08-08/19:15:59		Start of Prediction
+2026-08-08/19:15:59		Entered the get_data method of the Data_Getter class
+2026-08-08/19:15:59		Data Load Successful.Exited the get_data method of the Data_Getter class
+2026-08-08/19:15:59		Entered the is_null_present method of the Preprocessor class
+2026-08-08/19:15:59		Finding missing values is a success.Data written to the null values file. Exited the is_null_present method of the Preprocessor class
+2026-08-08/19:15:59		Entered the scale_numerical_columns method of the Preprocessor class
+2026-08-08/19:15:59		scaling for numerical values successful. Exited the scale_numerical_columns method of the Preprocessor class
+2026-08-08/19:15:59		Entered the load_model method of the File_Operation class
+2026-08-08/19:15:59		Model File KMeans loaded. Exited the load_model method of the Model_Finder class
+2026-08-08/19:15:59		Error occured while running the prediction!! Error:: 'KMeans' object has no attribute '_n_threads'
+2026-08-08/19:16:04		Start of Validation on files for prediction!!
+2026-08-08/19:16:04		Raw Data Validation Complete!!
+2026-08-08/19:16:04		Starting Data Transforamtion!!
+2026-08-08/19:16:04		DataTransformation Completed!!!
+2026-08-08/19:16:04		Creating Prediction_Database and tables on the basis of given schema!!!
+2026-08-08/19:16:04		Table creation Completed!!
+2026-08-08/19:16:04		Insertion of Data into Table started!!!!
+2026-08-08/19:16:15		Insertion in Table completed!!!
+2026-08-08/19:16:15		Deleting Good Data Folder!!!
+2026-08-08/19:16:15		Good_Data folder deleted!!!
+2026-08-08/19:16:15		Moving bad files to Archive and deleting Bad_Data folder!!!
+2026-08-08/19:16:15		Bad files moved to archive!! Bad folder Deleted!!
+2026-08-08/19:16:15		Validation Operation completed!!
+2026-08-08/19:16:15		Extracting csv file from table
+2026-08-08/19:16:15		Start of Prediction
+2026-08-08/19:16:15		Entered the get_data method of the Data_Getter class
+2026-08-08/19:16:15		Data Load Successful.Exited the get_data method of the Data_Getter class
+2026-08-08/19:16:15		Entered the is_null_present method of the Preprocessor class
+2026-08-08/19:16:15		Finding missing values is a success.Data written to the null values file. Exited the is_null_present method of the Preprocessor class
+2026-08-08/19:16:15		Entered the scale_numerical_columns method of the Preprocessor class
+2026-08-08/19:16:15		scaling for numerical values successful. Exited the scale_numerical_columns method of the Preprocessor class
+2026-08-08/19:16:15		Entered the load_model method of the File_Operation class
+2026-08-08/19:16:15		Model File KMeans loaded. Exited the load_model method of the Model_Finder class
+2026-08-08/19:16:15		Error occured while running the prediction!! Error:: 'KMeans' object has no attribute '_n_threads'
