@@ -1,10 +1,13 @@
 import os
+import sys
 from flask import Flask, request, render_template
 from flask import Response
 from flask_cors import CORS, cross_origin
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 os.chdir(BASE_DIR)
+if BASE_DIR not in sys.path:
+    sys.path.insert(0, BASE_DIR)
 
 from prediction_Validation_Insertion import pred_validation
 from trainingModel import trainModel
